@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica de initiere RC-241</title>
+  <style>
+    body 
+    {
+      font-family: "Comic Sans MS";
+      margin: 0;
+      padding: 0;
+      position: relative;
+      min-height: 150vh;
+    }
+
+    .navbar 
+    {
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .corner-name 
+    {
+      position: fixed;
+      color: #333;
+      font-weight: bold;
+      z-index: 998;
+    }
+
+    .top-left 
+    { 
+        top: 65px; left: 15px; 
+    }
+
+    .top-right
+    { 
+        top: 65px; right: 15px; 
+    }
+
+    .bottom-left-footer 
+    {
+        bottom: 25px; left: 25px;
+    }
+
+    .bottom-right-footer 
+    { 
+        bottom: 25px; right: 25px; 
+    }
+
+    .container 
+    {
+      padding: 90px 15px 40px;
+      text-align: center;
+    }
+
+    input[type="password"], select, input[type="date"] 
+    {
+      margin: 20px;
+      padding: 15px;
+      width: 300px;
+    }
+
+    .dropdown-container 
+    {
+      margin-top: 25px;
+      display: inline-block;
+    }
+
+    .calendar-container 
+    {
+      display: inline-block;
+      margin-top: 25px;
+    }
+
+    .images-row 
+    {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .images-row img 
+    {
+      width: 300px;
+      height: auto;
+    }
+
+    .round-button 
+    {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: gray;
+      border: 1px solid #aaa;
+      cursor: pointer;
+    }
+
+    .round-button.active 
+    {
+      background-color: green;
+    }
+
+    .checkbox-section 
+    {
+      margin-top: 15px;
+    }
+
+    footer 
+    {
+        background-color: blue;
+        padding: 45px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        }
+
+    .centered-row
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+.checkbox-section 
+{
+  text-align: center;
+  margin-top: 15px;
+}
+  </style>
+
+</head>
+<body>
+  <div class="navbar">Practica de initiere RC-241</div>
+
+  <div class="corner-name top-left">Ivanovski Vlad</div>
+  <div class="corner-name top-right">Ivanovski Vlad</div>
+
+    <div class="container">
+        <div class="input-row">
+          <input type="name" placeholder="nume" onclick="this.placeholder=''">
+      
+          <div class="dropdown-container">
+            <label for="mediu"><strong>Mediu/importanta</strong></label><br>
+            <select id="mediu">
+              <option disabled selected>-- Selectează --</option>
+              <option>Important</option>
+              <option>Mai putin Important</option>
+            </select>
+          </div>
+      
+          <input type="date">
+        </div>
+      </div>
+
+   
+
+    <div class="images-row">
+      <img src="cat1.jpg" alt="Imagine 1">
+      <img src="cat2.png" alt="Imagine 2">
+      <img src="cat3.png" alt="Imagine 3">
+    </div>
+
+    
+      <div class="centered-row">
+        <button class="round-button" onclick="toggleActive(this)"></button>
+        <span>raspuns 1</span>
+      </div>
+      
+      <div class="checkbox-section">
+        <input type="checkbox" id="raspuns">
+        <label for="raspuns">raspuns 2</label>
+      </div>
+  </div>
+
+  <footer>
+    <div class="footer"></div>
+    <div class="corner-name bottom-left-footer"><p>Ivanovski Vlad</p></div>
+    <div class="corner-name bottom-right-footer"><p>Ivanovski Vlad</p></div>  
+  </footer>
+
+  <script>
+    function toggleActive(btn) 
+    {
+      btn.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
