@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Courses - eLearning CUTM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li {
+      font-weight: 500;
+    }
+
+    .nav-links li.active a {
+      color: orange;
+      font-weight: 700;
+    }
+
+    .auth {
+      font-size: 14px;
+    }
+
+    .search-icon {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .breadcrumb {
+      background: #f7f7f7;
+      padding: 10px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row-reverse; /* Swaps sidebar to the right */
+      margin: 30px auto;
+      gap: 30px;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #eee;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .sidebar ul {
+      margin-bottom: 20px;
+    }
+
+    .sidebar li {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .courses {
+      flex: 1;
+    }
+
+    .courses h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .course-card {
+      display: flex;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      transition: box-shadow 0.3s;
+    }
+
+    .course-card:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .course-card img {
+      width: 250px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .course-details {
+      padding: 15px;
+      position: relative;
+      flex: 1;
+    }
+
+    .course-details .label {
+      display: inline-block;
+      font-size: 13px;
+      background: #000;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .course-details h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: green;
+    }
+
+    .view-more {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      color: orange;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .pagination {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .pagination a {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .pagination a.active {
+      background: orange;
+      color: white;
+      border-color: orange;
+    }
+
+    .footer {
+      background: #f8f8f8;
+      margin-top: 60px;
+      padding: 40px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer h4 {
+      margin-bottom: 10px;
+      color: #222;
+      font-weight: 600;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+    }
+
+    .socials {
+      margin-top: 10px;
+      font-size: 18px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .socials img {
+      height: 30px;
+      width: auto;
+      cursor: pointer;
+    }
+    .search-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  height: 20px;   /* sau altă valoare, gen 16px */
+  width: 20px;
+  object-fit: contain;
+}
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="carte.jpg" alt="Logo">
+      <span class="site-title">eLearning CUTM</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="courses.html">Courses</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Page</a></li>
+      <li><a href="#">LearnPress Add-On</a></li>
+      <li><a href="#">Premium Theme</a></li>
+    </ul>
+    <div class="auth">
+        Login / Register
+        <img src="lupa.png" alt="Search" class="search-icon">
+      </div>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <p>Course > The Structure Guide To The World’s Best LMS</p>
+    </div>
+  </div>
+
+  <main class="container main-content">
+    <aside class="sidebar">
+      <h3>Course Category</h3>
+      <ul>
+        <li>Commercial (15)</li>
+        <li>Office (15)</li>
+        <li>Shop (15)</li>
+        <li>Education (15)</li>
+        <li>Academy (15)</li>
+        <li>Street/Entry home (15)</li>
+      </ul>
+
+      <h3>Instructors</h3>
+      <ul>
+        <li>Walter White (15)</li>
+        <li>Jeremy Scout (15)</li>
+        <li>Olivia Gardens (15)</li>
+      </ul>
+
+      <h3>Review</h3>
+      <ul>
+        <li>★★★★★ (0.052)</li>
+        <li>★★★★☆ (0.052)</li>
+        <li>★★★☆☆ (0.052)</li>
+      </ul>
+
+      <h3>Level</h3>
+      <ul>
+        <li>All level (15)</li>
+        <li>Beginner (15)</li>
+        <li>Intermediate (15)</li>
+        <li>Expert (15)</li>
+      </ul>
+    </aside>
+
+    <section class="courses">
+      <h2>All Courses</h2>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+      </div>
+
+      <div class="course-card">
+        <img src="cursa1.jpg" alt="Course Thumbnail" />
+        <div class="course-details">
+          <span class="label">Photography</span>
+          <h3>Create An LMS Website With LearnPress</h3>
+          <div class="meta">
+            <span>2 Weeks</span> • <span>50 Students</span> • <span>30 Lessons</span>
+          </div>
+          <div class="price">💲170 </div>
+          <a href="#" class="view-more">View More</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="cursa2.jpg" alt="Course Thumbnail" />
+        <div class="course-details">
+          <span class="label">Photography</span>
+          <h3>Create An LMS Website With LearnPress</h3>
+          <div class="meta">
+            <span>4 Weeks</span> • <span>80 Students</span> • <span>35 Lessons</span>
+          </div>
+          <div class="price">💲80 </div>
+          <a href="#" class="view-more">View More</a>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h4>📘 eLearning CUTM</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod neque sit amet lorem placerat.</p>
+      </div>
+      <div>
+        <h4>GET HELP</h4>
+        <ul>
+          <li>Customer Support</li>
+          <li>Returns</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div>
+        <h4>PROGRAMS</h4>
+        <ul>
+          <li>Art & Design</li>
+          <li>IT & Software</li>
+          <li>Languages</li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT US</h4>
+        <p>Address: 21st Main Design St., Lorem Ipsum10</p>
+        <p>Phone: +123 456 789</p>
+        <p>Email: support@elearning.com</p>
+        <div class="socials">
+          <img src="facebook.jpg" alt="Facebook">
+          <img src="x.jpg" alt="Twitter">
+          <img src="instrgram.jpg" alt="Instagram">
+          <img src="pinterest.jpg" alt="LinkedIn">
+          <img src="yt.jpg" alt="YouTube">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

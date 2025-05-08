@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eLearning CUTM - Home</title>
+  <style>
+    body 
+    {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .navbar 
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar-left 
+    {
+      display: flex;
+      align-items: center;
+    }
+    .site-title 
+    {
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    .navbar nav a 
+    {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .navbar img 
+    {
+      height: 40px;
+    }
+    .search-bar 
+    {
+      display: flex;
+      align-items: center;
+    }
+    .search-bar input 
+    {
+      padding: 5px;
+    }
+    .search-bar button 
+    {
+      padding: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .hero 
+    {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      background: linear-gradient(to right, #fff7d5, #d1f9ee);
+      flex-wrap: wrap;
+    }
+    .hero-text 
+    {
+      max-width: 50%;
+    }
+    .hero-text h1 
+    {
+      font-size: 40px;
+    }
+    .hero-text p 
+    {
+      margin: 20px 0;
+      color: #555;
+    }
+    .hero-text button 
+    {
+      padding: 10px 20px;
+      background-color: #f66;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    .categories 
+    {
+      padding: 40px;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .categories-left 
+    {
+      max-width: 70%;
+    }
+    .categories-right 
+    {
+      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .categories h2 
+    {
+      margin-bottom: 10px;
+    }
+    .categories-grid 
+    {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+      justify-items: center;
+    }
+    .category 
+    {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #eee;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .category img 
+    {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="carte.jpg" alt="Logo">
+      <span class="site-title">eLearning CUTM</span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Blog</a>
+        <a href="#">Page</a>
+        <a href="#">Add-On</a>
+        <a href="#">Premium Theme</a>
+        <a href="#">Login / Register</a>
+      </nav>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>🔍</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Build Skills With Online Course</h1>
+      <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized that they cannot trouble.</p>
+      <button>Posts Comment!</button>
+    </div>
+    <img src="fata.png" alt="Student" height="300">
+  </section>
+
+  <section class="categories">
+    <div class="categories-left">
+      <h2>Top Categories</h2>
+      <p>Explore our Popular Categories</p>
+    </div>
+    <div class="categories-right">
+      <button>All Categories</button>
+    </div>
+  </section>
+
+  <section class="categories-grid">
+    <div class="category"><img src="arta.jpg" alt="Art">Art & Design<br>38 Courses</div>
+    <div class="category"><img src="cod.jpg" alt="Development">Development<br>38 Courses</div>
+    <div class="category"><img src="comunicatie.jpg" alt="Communication">Communication<br>38 Courses</div>
+    <div class="category"><img src="video.png" alt="Videography">Videography<br>38 Courses</div>
+    <div class="category"><img src="cinema.jpg" alt="Photography">Photography<br>38 Courses</div>
+    <div class="category"><img src="marketing.jpg" alt="Marketing">Marketing<br>38 Courses</div>
+    <div class="category"><img src="content.png" alt="Content Writing">Content Writing<br>38 Courses</div>
+    <div class="category"><img src="finanta.jpg" alt="Finance">Finance<br>38 Courses</div>
+    <div class="category"><img src="stiinta.jpg" alt="Science">Science<br>38 Courses</div>
+    <div class="category"><img src="arta.jpg" alt="Network">Network<br>38 Courses</div>
+  </section>
+</body>
+</html>
