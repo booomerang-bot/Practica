@@ -1,0 +1,127 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+.window {
+    padding: 20px;
+}
+.head-window {
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.actions {
+    margin: 10px 0;
+}
+.new-game {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+.solitaire {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.deck, .finish-deck, .board-deck {
+    display: flex;
+    gap: 10px;
+}
+.card {
+    width: 60px;
+    height: 90px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    width: 109%;
+    height: auto;
+    object-fit: contain;
+}
+.pile-slot {
+    position: absolute;
+    width: 60px;
+    height: 90px;
+    border: 2px dashed #444;
+    border-radius: 8px;
+    background: none;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.pile {
+    position: relative;
+    display: inline-block;
+    min-width: 60px;
+    min-height: 90px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.pile .card {
+    position: absolute;
+    left: 0;
+    transition: top 0.1s;
+}
+.pile .card:first-child {
+    margin-top: 0;
+}
+.foundation {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 90px;
+    margin-right: 10px;
+    vertical-align: top;
+    background: none;
+    border: 2px dashed #444;
+    border-radius: 8px;
+}
+
+.foundation .card {
+    position: absolute;
+    left: 0;
+    margin: 0;
+}
+#waste, #deckDeal {
+    position: relative;
+    min-width: 60px;
+    min-height: 90px;
+}
+#waste .card,
+#deckDeal .card {
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.deck {
+    position: relative;
+    display: inline-block;
+    min-width: 120px;
+    min-height: 90px;
+    vertical-align: top;
+}
+
+.deck-deal, .deck-pile {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 90px;
+    vertical-align: top;
+}
+.deck-deal .card {
+    position: absolute;
+    top: 0;
+}
