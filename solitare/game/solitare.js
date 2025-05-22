@@ -29,4 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
         window.deckDeal.innerHTML = "";
         renderFoundations();
     });
+
+    document.getElementById('exit-game').addEventListener('click', function() {
+        window.location.href = '../index/index.html';
+    });
 });
